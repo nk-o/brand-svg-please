@@ -438,7 +438,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'product-hunt'              => esc_html__( 'Product Hunt', 'bsp' ),
                 'pushed'                    => esc_html__( 'Pushed', 'bsp' ),
                 'python'                    => esc_html__( 'Python', 'bsp' ),
-                'qq'                        => esc_html__( 'QQ', 'bsp' ),
+                'qq'                        => array(
+                    'name' => esc_html__( 'Tencent QQ', 'bsp' ),
+                    'keys' => array( 'tencent-qq' ),
+                ),
                 'quinscape'                 => esc_html__( 'QuinScape', 'bsp' ),
                 'quora'                     => esc_html__( 'Quora', 'bsp' ),
                 'r-project'                 => esc_html__( 'R', 'bsp' ),
