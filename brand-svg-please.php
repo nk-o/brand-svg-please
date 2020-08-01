@@ -147,8 +147,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
             );
 
             if ( file_exists( $path ) ) {
-                // phpcs:ignore
-                $svg = file_get_contents( $path );
+                // We can't use file_get_contents in WordPress themes.
+                ob_start();
+                include $path;
+                $svg = ob_get_clean();
 
                 // Add extra attributes to SVG code.
                 // translators: %1$s - classname.
