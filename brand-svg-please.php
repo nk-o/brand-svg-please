@@ -2,7 +2,7 @@
 /**
  * Brand SVG Please
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @link https://github.com/nk-o/brand-svg-please
  * @package bsp
  */
