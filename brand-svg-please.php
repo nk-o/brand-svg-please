@@ -504,6 +504,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'the-red-yeti'              => esc_html__( 'The Red Yeti', 'bsp' ),
                 'themeisle'                 => esc_html__( 'Themeisle', 'bsp' ),
                 'think-peaks'               => esc_html__( 'ThinkPeaks', 'bsp' ),
+                'tiktok'                    => esc_html__( 'TikTok', 'bsp' ),
                 'trade-federation'          => esc_html__( 'Trade Federation', 'bsp' ),
                 'trello'                    => esc_html__( 'Trello', 'bsp' ),
                 'tripadvisor'               => esc_html__( 'Tripadvisor', 'bsp' ),
@@ -534,6 +535,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'vnv'                       => esc_html__( 'VNV', 'bsp' ),
                 'vuejs'                     => esc_html__( 'Vue.js', 'bsp' ),
                 'waze'                      => esc_html__( 'Waze', 'bsp' ),
+                'wechat'                    => array(
+                    'name' => esc_html__( 'WeChat', 'bsp' ),
+                    'keys' => array( 'weixin' ),
+                ),
                 'weebly'                    => esc_html__( 'Weebly', 'bsp' ),
                 'weibo'                     => esc_html__( 'Weibo', 'bsp' ),
                 'weixin'                    => esc_html__( 'Weixin', 'bsp' ),
