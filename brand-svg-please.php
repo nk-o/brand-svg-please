@@ -15,10 +15,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Get the SVG string for a given icon.
          *
-         * @param String $name - brand name.
-         * @param Array  $data - svg icon data.
+         * @param string $name - brand name.
+         * @param array  $data - svg icon data.
          *
-         * @return String
+         * @return string
          */
         public static function get( $name, $data = array() ) {
             $brand = self::find_brand( $name );
@@ -33,8 +33,8 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Print the SVG string for a given icon.
          *
-         * @param String $name - icon name.
-         * @param Array  $data - svg icon data.
+         * @param string $name - icon name.
+         * @param array  $data - svg icon data.
          */
         public static function get_e( $name, $data = array() ) {
             if ( self::exists( $name ) ) {
@@ -45,9 +45,9 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Get the SVG string for a given icon.
          *
-         * @param String $name - brand name.
+         * @param string $name - brand name.
          *
-         * @return String
+         * @return string
          */
         public static function get_name( $name ) {
             $brand = self::find_brand( $name );
@@ -62,9 +62,9 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Check if SVG icon exists.
          *
-         * @param String $name - brand name.
+         * @param string $name - brand name.
          *
-         * @return Boolean
+         * @return boolean
          */
         public static function exists( $name ) {
             return ! ! self::find_brand( $name );
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Data for SVG useful in wp_kses function.
          *
-         * @return Array
+         * @return array
          */
         public static function kses() {
             return array(
@@ -104,9 +104,9 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Find brand data.
          *
-         * @param String $name - brand name.
+         * @param string $name - brand name.
          *
-         * @return Null|Array
+         * @return null|array
          */
         private static function find_brand( $name ) {
             $result = null;
@@ -132,10 +132,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Get the SVG string for a given icon.
          *
-         * @param String $path - icon path.
-         * @param Array  $data - svg icon data.
+         * @param string $path - icon path.
+         * @param array  $data - svg icon data.
          *
-         * @return String
+         * @return string
          */
         private static function get_svg_by_path( $path, $data = array() ) {
             $data = array_merge(
@@ -167,19 +167,21 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
         /**
          * Get all available brands.
          *
-         * @param Boolean $get_svg - get SVG and insert it inside array.
-         * @param Array   $svg_data - svg data.
+         * @param boolean $get_svg - get SVG and insert it inside array.
+         * @param array   $svg_data - svg data.
          *
-         * @return Array
+         * @return array
          */
         public static function get_all_brands( $get_svg = false, $svg_data = array() ) {
             $brands = array(
+                '42-group'                  => esc_html__( '42 Group', 'bsp' ),
                 '500px'                     => esc_html__( '500px', 'bsp' ),
                 'accusoft'                  => esc_html__( 'Accusoft', 'bsp' ),
                 'acquisitions-incorporated' => esc_html__( 'Acquisitions Incorporated', 'bsp' ),
                 'adn'                       => esc_html__( 'ADN', 'bsp' ),
                 'adobe'                     => esc_html__( 'Adobe', 'bsp' ),
                 'adversal'                  => esc_html__( 'Adversal', 'bsp' ),
+                'affiliatetheme'            => esc_html__( 'Affiliate Theme', 'bsp' ),
                 'airbnb'                    => esc_html__( 'Airbnb', 'bsp' ),
                 'algolia'                   => esc_html__( 'Algolia', 'bsp' ),
                 'alipay'                    => esc_html__( 'Alipay', 'bsp' ),
@@ -191,6 +193,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'angrycreative'             => esc_html__( 'Angry Creative', 'bsp' ),
                 'angular'                   => esc_html__( 'Angular', 'bsp' ),
                 'app-store'                 => esc_html__( 'App Store', 'bsp' ),
+                'app-store-ios'             => esc_html__( 'App Store iOS', 'bsp' ),
                 'apper'                     => esc_html__( 'Apper', 'bsp' ),
                 'apple-pay'                 => esc_html__( 'Apple Pay', 'bsp' ),
                 'apple'                     => esc_html__( 'Apple', 'bsp' ),
@@ -204,6 +207,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'bandcamp'                  => esc_html__( 'Bandcamp', 'bsp' ),
                 'battle-net'                => esc_html__( 'Battle.net', 'bsp' ),
                 'behance'                   => esc_html__( 'Behance', 'bsp' ),
+                'bilibili'                  => esc_html__( 'Bilibili', 'bsp' ),
                 'bimobject'                 => esc_html__( 'BIMobject', 'bsp' ),
                 'bitbucket'                 => esc_html__( 'Bitbucket', 'bsp' ),
                 'bitcoin'                   => esc_html__( 'Bitcoin', 'bsp' ),
@@ -213,6 +217,8 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'blogger'                   => esc_html__( 'Blogger', 'bsp' ),
                 'bluetooth'                 => esc_html__( 'Bluetooth', 'bsp' ),
                 'bootstrap'                 => esc_html__( 'Bootstrap', 'bsp' ),
+                'bots'                      => esc_html__( 'Bots', 'bsp' ),
+                'brave'                     => esc_html__( 'Brave', 'bsp' ),
                 'btc'                       => esc_html__( 'BTC', 'bsp' ),
                 'buffer'                    => esc_html__( 'Buffer', 'bsp' ),
                 'buromobelexperte'          => esc_html__( 'Büromöbel Experte', 'bsp' ),
@@ -233,9 +239,11 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'centos'                    => esc_html__( 'CentOS', 'bsp' ),
                 'chrome'                    => esc_html__( 'Chrome', 'bsp' ),
                 'chromecast'                => esc_html__( 'Chromecast', 'bsp' ),
+                'cloudflare'                => esc_html__( 'Cloudflare', 'bsp' ),
                 'cloudscale'                => esc_html__( 'CloudScale', 'bsp' ),
                 'cloudsmith'                => esc_html__( 'Cloudsmith', 'bsp' ),
                 'cloudversify'              => esc_html__( 'Cloudversify', 'bsp' ),
+                'cmplid'                    => esc_html__( 'Cmplid://', 'bsp' ),
                 'codepen'                   => esc_html__( 'CodePen', 'bsp' ),
                 'codiepie'                  => esc_html__( 'CodiePie', 'bsp' ),
                 'confluence'                => esc_html__( 'Confluence', 'bsp' ),
@@ -250,6 +258,8 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'd-and-d'                   => esc_html__( 'D&D', 'bsp' ),
                 'dailymotion'               => esc_html__( 'Dailymotion', 'bsp' ),
                 'dashcube'                  => esc_html__( 'Dashcube', 'bsp' ),
+                'debian'                    => esc_html__( 'Debian', 'bsp' ),
+                'deezer'                    => esc_html__( 'Deezer', 'bsp' ),
                 'delicious'                 => esc_html__( 'Delicious', 'bsp' ),
                 'deploydog'                 => array(
                     'name' => esc_html__( 'deploy.dog', 'bsp' ),
@@ -319,21 +329,27 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'gitter'                    => esc_html__( 'Gitter', 'bsp' ),
                 'glide'                     => esc_html__( 'Glide', 'bsp' ),
                 'gofore'                    => esc_html__( 'Gofore', 'bsp' ),
+                'golang'                    => esc_html__( 'Go (programming language)', 'bsp' ),
                 'goodreads'                 => esc_html__( 'Goodreads', 'bsp' ),
                 'google-drive'              => esc_html__( 'Google Drive', 'bsp' ),
+                'google-pay'                => esc_html__( 'Google Pay', 'bsp' ),
                 'google-play'               => esc_html__( 'Google Play', 'bsp' ),
                 'google-plus'               => esc_html__( 'Google Plus', 'bsp' ),
+                'google-scholar'            => esc_html__( 'Google Scholar', 'bsp' ),
                 'google-wallet'             => esc_html__( 'Google Wallet', 'bsp' ),
                 'google'                    => esc_html__( 'Google', 'bsp' ),
                 'gratipay'                  => esc_html__( 'Gratipay', 'bsp' ),
                 'grav'                      => esc_html__( 'Grav', 'bsp' ),
                 'gripfire'                  => esc_html__( 'Gripfire', 'bsp' ),
                 'grunt'                     => esc_html__( 'Grunt', 'bsp' ),
+                'guilded'                   => esc_html__( 'Guilded', 'bsp' ),
                 'gulp'                      => esc_html__( 'Gulp', 'bsp' ),
                 'hacker-news'               => esc_html__( 'Hacker News', 'bsp' ),
                 'hackerrank'                => esc_html__( 'HackerRank', 'bsp' ),
+                'hashnode'                  => esc_html__( 'Hashnode', 'bsp' ),
                 'hips'                      => esc_html__( 'HIPS', 'bsp' ),
                 'hire-a-helper'             => esc_html__( 'HireAHelper', 'bsp' ),
+                'hive'                      => esc_html__( 'Hive', 'bsp' ),
                 'hornbill'                  => esc_html__( 'Hornbill', 'bsp' ),
                 'hotjar'                    => esc_html__( 'Hotjar', 'bsp' ),
                 'houzz'                     => esc_html__( 'Houzz', 'bsp' ),
@@ -342,6 +358,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'ideal'                     => esc_html__( 'iDEAL', 'bsp' ),
                 'imdb'                      => esc_html__( 'IMDb', 'bsp' ),
                 'instagram'                 => esc_html__( 'Instagram', 'bsp' ),
+                'instalod'                  => esc_html__( 'InstaLOD', 'bsp' ),
                 'intercom'                  => esc_html__( 'Intercom', 'bsp' ),
                 'internet-explorer'         => array(
                     'name' => esc_html__( 'Internet Explorer', 'bsp' ),
@@ -371,6 +388,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'lastfm'                    => esc_html__( 'Last.fm', 'bsp' ),
                 'leanpub'                   => esc_html__( 'Leanpub', 'bsp' ),
                 'less'                      => esc_html__( 'Less', 'bsp' ),
+                'letterboxd'                => esc_html__( 'Letterboxd', 'bsp' ),
                 'line'                      => esc_html__( 'Line', 'bsp' ),
                 'linkedin'                  => esc_html__( 'LinkedIn', 'bsp' ),
                 'linode'                    => esc_html__( 'Linode', 'bsp' ),
@@ -392,8 +410,10 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'meetup'                    => esc_html__( 'Meetup', 'bsp' ),
                 'megaport'                  => esc_html__( 'Megaport', 'bsp' ),
                 'mendeley'                  => esc_html__( 'Mendeley', 'bsp' ),
+                'meta'                      => esc_html__( 'Meta', 'bsp' ),
                 'microblog'                 => esc_html__( 'Micro.blog', 'bsp' ),
                 'microsoft'                 => esc_html__( 'Microsoft', 'bsp' ),
+                'mintbit'                   => esc_html__( 'Mintbit', 'bsp' ),
                 'mix'                       => esc_html__( 'Mix', 'bsp' ),
                 'mixcloud'                  => esc_html__( 'Mixcloud', 'bsp' ),
                 'mixer'                     => esc_html__( 'Mixer', 'bsp' ),
@@ -408,29 +428,36 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'npm'                       => esc_html__( 'npm', 'bsp' ),
                 'ns8'                       => esc_html__( 'NS8', 'bsp' ),
                 'nutritionix'               => esc_html__( 'Nutritionix', 'bsp' ),
+                'octopus-deploy'            => esc_html__( 'Octopus Deploy', 'bsp' ),
                 'odnoklassniki'             => array(
                     'name' => esc_html__( 'Odnoklassniki', 'bsp' ),
                     'keys' => array( 'ok' ),
                 ),
+                'odysee'                    => esc_html__( 'Odysee', 'bsp' ),
                 'old-republic'              => esc_html__( 'Old Republic', 'bsp' ),
                 'opencart'                  => esc_html__( 'OpenCart', 'bsp' ),
                 'openid'                    => esc_html__( 'OpenID', 'bsp' ),
+                'opensuse'                  => esc_html__( 'openSUSE', 'bsp' ),
                 'opera'                     => esc_html__( 'Opera', 'bsp' ),
                 'optin-monster'             => esc_html__( 'OptinMonster', 'bsp' ),
                 'orcid'                     => esc_html__( 'ORCID', 'bsp' ),
                 'osi'                       => esc_html__( 'OSI', 'bsp' ),
+                'padlet'                    => esc_html__( 'Padlet', 'bsp' ),
                 'page4'                     => esc_html__( 'PAGE4', 'bsp' ),
                 'pagelines'                 => esc_html__( 'PageLines', 'bsp' ),
                 'palfed'                    => esc_html__( 'PalFed', 'bsp' ),
                 'patreon'                   => esc_html__( 'Patreon', 'bsp' ),
                 'paypal'                    => esc_html__( 'PayPal', 'bsp' ),
                 'penny-arcade'              => esc_html__( 'Penny Arcade', 'bsp' ),
+                'perbyte'                   => esc_html__( 'PerByte', 'bsp' ),
                 'periscope'                 => esc_html__( 'Periscope', 'bsp' ),
                 'phabricator'               => esc_html__( 'Phabricator', 'bsp' ),
                 'phoenix-framework'         => esc_html__( 'Phoenix Framework', 'bsp' ),
                 'phoenix-squadron'          => esc_html__( 'Phoenix Squadron', 'bsp' ),
                 'php'                       => esc_html__( 'PHP', 'bsp' ),
                 'pinterest'                 => esc_html__( 'Pinterest', 'bsp' ),
+                'pix'                       => esc_html__( 'PIX', 'bsp' ),
+                'pixiv'                     => esc_html__( 'Pixiv', 'bsp' ),
                 'playstation'               => array(
                     'name' => esc_html__( 'PlayStation', 'bsp' ),
                     'keys' => array( 'ps' ),
@@ -461,11 +488,13 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'rev'                       => esc_html__( 'Rev', 'bsp' ),
                 'rocketchat'                => esc_html__( 'Rocket.Chat', 'bsp' ),
                 'rockrms'                   => esc_html__( 'Rock RMS', 'bsp' ),
+                'rust'                      => esc_html__( 'Rust', 'bsp' ),
                 'safari'                    => esc_html__( 'Safari', 'bsp' ),
                 'salesforce'                => esc_html__( 'Salesforce', 'bsp' ),
                 'sass'                      => esc_html__( 'Sass', 'bsp' ),
                 'schlix'                    => esc_html__( 'SCHLIX', 'bsp' ),
                 'scribd'                    => esc_html__( 'Scribd', 'bsp' ),
+                'screenpal'                 => esc_html__( 'ScreenPal', 'bsp' ),
                 'searchengin'               => esc_html__( 'Searchengin', 'bsp' ),
                 'sellcast'                  => esc_html__( 'SellCast', 'bsp' ),
                 'sellsy'                    => esc_html__( 'Sellsy', 'bsp' ),
@@ -476,6 +505,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'simplybuilt'               => esc_html__( 'SimplyBuilt', 'bsp' ),
                 'sistrix'                   => esc_html__( 'SISTRIX', 'bsp' ),
                 'sith'                      => esc_html__( 'Sith', 'bsp' ),
+                'sitrox'                    => esc_html__( 'Sitrox', 'bsp' ),
                 'sketch'                    => esc_html__( 'Sketch', 'bsp' ),
                 'skyatlas'                  => esc_html__( 'SkyAtlas', 'bsp' ),
                 'skype'                     => esc_html__( 'Skype', 'bsp' ),
@@ -496,6 +526,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'sticker-mule'              => esc_html__( 'Sticker Mule', 'bsp' ),
                 'strava'                    => esc_html__( 'Strava', 'bsp' ),
                 'stripe'                    => esc_html__( 'Stripe', 'bsp' ),
+                'stubber'                   => esc_html__( 'Stubber', 'bsp' ),
                 'studiovinari'              => esc_html__( 'Studio Vinari', 'bsp' ),
                 'stumbleupon'               => esc_html__( 'StumbleUpon', 'bsp' ),
                 'superpowers'               => esc_html__( 'Superpowers', 'bsp' ),
@@ -508,6 +539,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'tencent-weibo'             => esc_html__( 'Tencent Weibo', 'bsp' ),
                 'the-red-yeti'              => esc_html__( 'The Red Yeti', 'bsp' ),
                 'themeisle'                 => esc_html__( 'Themeisle', 'bsp' ),
+                'threads'                   => esc_html__( 'Threads', 'bsp' ),
                 'think-peaks'               => esc_html__( 'ThinkPeaks', 'bsp' ),
                 'tiktok'                    => esc_html__( 'TikTok', 'bsp' ),
                 'trade-federation'          => esc_html__( 'Trade Federation', 'bsp' ),
@@ -521,10 +553,13 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'ubuntu'                    => esc_html__( 'Ubuntu', 'bsp' ),
                 'uikit'                     => esc_html__( 'UIkit', 'bsp' ),
                 'umbraco'                   => esc_html__( 'Umbraco', 'bsp' ),
+                'uncharted'                 => esc_html__( 'Uncharted', 'bsp' ),
                 'uniregistry'               => esc_html__( 'Uniregistry', 'bsp' ),
                 'unity'                     => esc_html__( 'Unity', 'bsp' ),
+                'unsplash'                  => esc_html__( 'Unsplash', 'bsp' ),
                 'untappd'                   => esc_html__( 'Untappd', 'bsp' ),
                 'ups'                       => esc_html__( 'UPS', 'bsp' ),
+                'upwork'                    => esc_html__( 'Upwork', 'bsp' ),
                 'usps'                      => esc_html__( 'USPS', 'bsp' ),
                 'ussunnah'                  => esc_html__( 'us-Sunnah', 'bsp' ),
                 'vaadin'                    => esc_html__( 'Vaadin', 'bsp' ),
@@ -539,6 +574,7 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 ),
                 'vnv'                       => esc_html__( 'VNV', 'bsp' ),
                 'vuejs'                     => esc_html__( 'Vue.js', 'bsp' ),
+                'watchman-monitoring'       => esc_html__( 'Watchman Monitoring', 'bsp' ),
                 'waze'                      => esc_html__( 'Waze', 'bsp' ),
                 'wechat'                    => array(
                     'name' => esc_html__( 'WeChat', 'bsp' ),
@@ -555,7 +591,9 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'wikipedia'                 => esc_html__( 'Wikipedia', 'bsp' ),
                 'windows'                   => esc_html__( 'Windows', 'bsp' ),
                 'wix'                       => esc_html__( 'WIX', 'bsp' ),
+                'wirsindhandwerk'           => esc_html__( 'wirsindhandwerk', 'bsp' ),
                 'wizards-of-the-coast'      => esc_html__( 'Wizards of the Coast', 'bsp' ),
+                'wodu'                      => esc_html__( 'Wodu.', 'bsp' ),
                 'wolf-pack-battalion'       => esc_html__( 'Wolf Pack Battalion', 'bsp' ),
                 'wordpress'                 => esc_html__( 'WordPress', 'bsp' ),
                 'wpbeginner'                => esc_html__( 'WPBeginner', 'bsp' ),
@@ -564,10 +602,15 @@ if ( ! class_exists( 'Brand_SVG_Please' ) ) :
                 'wpressr'                   => esc_html__( 'WPressr', 'bsp' ),
                 'xbox'                      => esc_html__( 'Xbox', 'bsp' ),
                 'xing'                      => esc_html__( 'XING', 'bsp' ),
+                'x-twitter'                 => array(
+                    'name' => esc_html__( 'X / Twitter', 'bsp' ),
+                    'keys' => array( 'x', 'twitter' ),
+                ),
                 'y-combinator'              => esc_html__( 'YCombinator', 'bsp' ),
                 'yahoo'                     => esc_html__( 'Yahoo', 'bsp' ),
                 'yammer'                    => esc_html__( 'Yammer', 'bsp' ),
                 'yandex'                    => esc_html__( 'Yandex', 'bsp' ),
+                'yandex-international'      => esc_html__( 'Yandex International', 'bsp' ),
                 'yarn'                      => esc_html__( 'Yarn', 'bsp' ),
                 'yelp'                      => esc_html__( 'Yelp', 'bsp' ),
                 'yoast'                     => esc_html__( 'Yoast', 'bsp' ),
