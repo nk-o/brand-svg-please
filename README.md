@@ -50,4 +50,4 @@ $brands = Brand_SVG_Please::get_all_brands();
 
 ## Thanks
 
-Thanks to FontAwesome team for the great SVG icons <https://github.com/FortAwesome/Font-Awesome/tree/6.x/free/svgs/brands>
+Thanks to FontAwesome team for the great SVG icons <https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs/brands>
